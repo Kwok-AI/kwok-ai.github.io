@@ -61,18 +61,40 @@ params:
     hiddenInList: true
     hiddenInSingle: false
 
-  fuseOpts:  # 站内搜索配置
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    keys:
-      - title
-      - permalink
-      - summary
-      - content
+  # 基础开关
+  search: true
+  
+  # Fuse.js 配置
+  fusejs:
+    enable: true
+    options:
+      isCaseSensitive: false
+      threshold: 0.4
+      keys: 
+        - { name: "title", weight: 3 }
+        - { name: "tags", weight: 2 }
+        - { name: "summary", weight: 1.5 }
+        - { name: "content", weight: 1 }
+    
+  # 界面配置
+  showSearchButton: true
+  searchStyle: "modal"
+  searchAutoFocus: true
+  
+  # 搜索页面
+  searchPage:
+    enable: true
+    placeholder: "搜索文章..."
+    
+  # 快捷键
+  searchShortcut:
+    enable: true
+    key: "k"
+    
+  # 搜索结果
+  searchResultContents: true
+  searchResultLength: 60
+  searchResultMax: 10
   
   # 社交链接
   socialIcons:
