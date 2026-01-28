@@ -57,15 +57,6 @@ params:
     - name: bilibili
       url: "https://space.bilibili.com/你的ID"
       title: "B站"
-      
-  profileMode:
-    enabled: true              # 启用个人资料模式
-    title: "你的名字"           # 侧边栏标题
-    subtitle: "程序员 | 博主"   # 副标题
-    imageUrl: "/images/avatar.png"  # 头像
-    imageWidth: 120            # 头像宽度
-    imageHeight: 120           # 头像高度
-    imageTitle: "我的头像"
     
   share:
     enable: true
