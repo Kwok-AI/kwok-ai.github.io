@@ -36,7 +36,11 @@ params:
   showCodeCopyButtons: true
 
   search: true
-  searchResultContents: true   # 搜索结果包含内容
+  searchResultContents: true
+
+  cover:
+    hiddenInList: true
+    hiddenInSingle: false
   
   # 社交链接
   socialIcons:
