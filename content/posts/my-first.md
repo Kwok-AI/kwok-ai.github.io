@@ -4,7 +4,7 @@ date: 2024-01-01
 tags: ["博客", "教程"]
 keywords: ["关键词1", "关键词2"]
 description: "文章摘要"
-images: ["/images/cover.jpg"] 
+images: ["/content/images/cover.jpg"] 
 ---
 
 # 欢迎来到我的博客
