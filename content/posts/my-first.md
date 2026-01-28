@@ -4,7 +4,11 @@ date: 2024-01-01
 tags: ["博客", "教程"]
 keywords: ["关键词1", "关键词2"]
 description: "文章摘要"
-images: ["/images/cover.jpg"] 
+cover:
+  image: "/images/cover.jpg"      # 封面图片路径
+  caption: "图片描述文字"           # 图片描述（可选）
+  alt: "封面图片"                  # 替代文本
+  hidden: false  
 ---
 
 # 欢迎来到我的博客
