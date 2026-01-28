@@ -34,9 +34,31 @@ params:
   showWordCount: true
   showBreadCrumbs: true
   showCodeCopyButtons: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
 
   search: true
-  searchResultContents: true
+
+  fusejs:
+    enable: true
+    
+  # 搜索结果显示配置
+  searchResultContents: true     # 搜索结果包含内容片段
+  searchResultLength: 60         # 结果显示字符数
+  
+  # 搜索页面配置
+  searchPage:
+    enable: true                 # 启用搜索页面
+    
+  # 搜索快捷键配置
+  searchShortcut:
+    enable: true                 # 启用快捷键
+    key: "k"      
 
   cover:
     hiddenInList: true
