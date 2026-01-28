@@ -1,3 +1,81 @@
 baseURL: "https://kwok-ai.github.io/"
-title: "我的博客"
+title: "KwokChung"
 theme: "PaperMod"
+languageCode: "zh-cn"
+defaultContentLanguage: "zh"
+
+# 元数据
+description: "记录技术、生活和思考"
+keywords: ["博客", "技术", "编程"]
+author: "KwokChung"
+
+# 时间地区
+timeZone: "Asia/Shanghai"      # 时区
+languageCode: "zh-cn"          # 语言代码
+defaultContentLanguage: "zh-cn" # 默认语言
+hasCJKLanguage: true           # 中日韩语言支持
+
+paginate: 10
+paginatePath: "page"
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+params:
+  # 首页设置
+  homeInfoParams:
+    Title: "欢迎来到我的博客"
+    Content: "你好！我是[KwokChung]，一名投身于基础教育领域的信息科技教师。我的日常工作是在课堂上为学生们开启通往数字世界的大门，教授他们从基础的编程逻辑、算法思维到数字公民素养等一系列课程。教学之外，编程是我持续了多年的业余热忱。在我看来，编程与教学是相互滋养的。代码世界严谨的逻辑锤炼了我的教学框架，而教育中所需的耐心与沟通艺术，也让我在调试bug时多了一份从容。我乐于分享，并始终对科技与教育交汇处迸发出的可能性充满好奇。期待与你交流一切关于技术、学习与创造的思考。 - 记录学习笔记 - 分享开发经验  - 探索技术前沿"
+  
+  # 文章设置
+  showPostSummary: true
+  showReadingTime: true
+  showWordCount: true
+  showBreadCrumbs: true
+  showCodeCopyButtons: true
+
+  search: true
+  searchResultContents: true   # 搜索结果包含内容
+  
+  # 社交链接
+  socialIcons:
+    - name: github
+      url: "https://github.com/kwok-ai"
+    - name: twitter
+      url: "https://twitter.com/你的用户名"
+      title: "Twitter"
+    - name: email
+      url: "mailto:你的邮箱@gmail.com"
+      title: "发送邮件"
+    - name: rss
+      url: "/index.xml"
+      title: "RSS订阅"
+    - name: zhihu
+      url: "https://www.zhihu.com/people/你的用户名"
+      title: "知乎"
+    - name: bilibili
+      url: "https://space.bilibili.com/你的ID"
+      title: "B站"
+    
+  share:
+    enable: true
+    Twitter: true
+    Facebook: true
+    Linkedin: true
+    
+# 菜单
+menu:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 1
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 2
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 3
