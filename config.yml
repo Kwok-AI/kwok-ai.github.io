@@ -4,6 +4,17 @@ theme: "PaperMod"
 languageCode: "zh-cn"
 defaultContentLanguage: "zh"
 
+# 元数据
+description: "记录技术、生活和思考"
+keywords: ["博客", "技术", "编程"]
+author: "KwokChung"
+
+# 时间地区
+timeZone: "Asia/Shanghai"      # 时区
+languageCode: "zh-cn"          # 语言代码
+defaultContentLanguage: "zh-cn" # 默认语言
+hasCJKLanguage: true           # 中日韩语言支持
+
 paginate: 10
 paginatePath: "page"
 enableRobotsTXT: true
@@ -30,7 +41,15 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/kwok-ai"
-share:
+  profileMode:
+    enabled: true              # 启用个人资料模式
+    title: "你的名字"           # 侧边栏标题
+    subtitle: "程序员 | 博主"   # 副标题
+    imageUrl: "/images/avatar.png"  # 头像
+    imageWidth: 120            # 头像宽度
+    imageHeight: 120           # 头像高度
+    imageTitle: "我的头像"
+  share:
     enable: true
     Twitter: true
     Facebook: true
