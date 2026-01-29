@@ -1,7 +1,7 @@
 baseURL: "https://kwok-ai.github.io/"
 title: "KwokChung's Blog"
 theme: "PaperMod"
-languageCode: "zh-cn"
+languageCode: "zh"
 defaultContentLanguage: "zh"
 
 # 元数据
