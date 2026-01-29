@@ -1,0 +1,20 @@
+
+/* 为首页列表添加缩进 */
+.entry-content ul, .entry-content ol {
+  padding-left: 2rem !important;
+  margin-left: 0 !important;
+}
+
+.entry-content li {
+  margin-bottom: 0.5rem;
+  display: list-item !important;
+}
+
+/* 确保列表样式正常 */
+.entry-content ul {
+  list-style-type: disc !important;
+}
+
+.entry-content ol {
+  list-style-type: decimal !important;
+}
