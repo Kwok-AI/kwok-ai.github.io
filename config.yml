@@ -102,10 +102,10 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/kwok-ai"
-    - name: weixin
-      url: "images/qq.png"
+      title: "访问我的GitHub"
     - name: WeChat
       url: "images/wechat.png"
+      title: "关注微信公众号"
     - name: email
       url: "mailto:40429927@qq.com"
       title: "发送邮件"
