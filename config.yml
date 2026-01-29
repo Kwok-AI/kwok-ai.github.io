@@ -66,6 +66,9 @@ params:
 
   # 基础开关
   search: true
+  showSearchButton: true
+  showSearchIcon: true
+  
   
   # Fuse.js 配置
   fusejs:
