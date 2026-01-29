@@ -31,6 +31,27 @@ params:
   homeInfoParams:
     Title: "欢迎来到我的博客"
     Content: |
+      <style>
+        /* 为首页列表添加缩进 */
+        .home-content ul, .home-content ol {
+          padding-left: 2rem !important;
+          margin-left: 0 !important;
+        }
+        
+        .home-content li {
+          margin-bottom: 0.5rem;
+          display: list-item !important;
+        }
+        
+        /* 确保列表样式正常 */
+        .home-content ul {
+          list-style-type: disc !important;
+        }
+        
+        .home-content ol {
+          list-style-type: decimal !important;
+        }
+      </style>
       你好！我是[KwokChung]，一名投身于基础教育领域的信息科技教师。教学之外，编程是我持续了多年的业余热忱，编程与教学是相互滋养的，代码世界严谨的逻辑锤炼了我的教学框架，而教育中所需的耐心与沟通艺术，也让我在调试bug时多了一份从容。
       
       期待与你交流一切关于技术、学习与创造的思考。
