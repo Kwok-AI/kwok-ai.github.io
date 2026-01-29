@@ -33,22 +33,22 @@ params:
     Content: |
       <style>
         /* 为首页列表添加缩进 */
-        .home-content ul, .home-content ol {
+        .entry-content ul, .entry-content ol {
           padding-left: 2rem !important;
           margin-left: 0 !important;
         }
         
-        .home-content li {
+        .entry-content li {
           margin-bottom: 0.5rem;
           display: list-item !important;
         }
         
         /* 确保列表样式正常 */
-        .home-content ul {
+        .entry-content ul {
           list-style-type: disc !important;
         }
         
-        .home-content ol {
+        .entry-content ol {
           list-style-type: decimal !important;
         }
       </style>
