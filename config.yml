@@ -63,9 +63,12 @@ params:
   cover:
     hiddenInList: true
     hiddenInSingle: false
-
+    
   # 基础开关
   search: true
+  showSearchButton: true
+  showSearchIcon: true
+  
   
   # Fuse.js 配置
   fusejs:
@@ -139,3 +142,9 @@ menu:
       name: 🔍 搜索
       url: /search/
       weight: 4
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
