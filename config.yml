@@ -9,12 +9,6 @@ description: "记录技术、生活和思考"
 keywords: ["博客", "技术", "编程"]
 author: "KwokChung"
 
-# 时间地区
-timeZone: "Asia/Shanghai"      # 时区
-languageCode: "zh-cn"          # 语言代码
-defaultContentLanguage: "zh-cn" # 默认语言
-hasCJKLanguage: true           # 中日韩语言支持
-
 paginate: 10
 paginatePath: "page"
 enableRobotsTXT: true
