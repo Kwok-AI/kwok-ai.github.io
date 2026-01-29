@@ -27,6 +27,7 @@ mainsections:
   - posts  # 主要内容位置，SEO 相关
 
 params:
+  customCSS: extended/list-style.css
   # 首页设置
   homeInfoParams:
     Title: "欢迎来到我的博客"
@@ -35,9 +36,9 @@ params:
       
       期待与你交流一切关于技术、学习与创造的思考。
       
-       - - 📚 **记录学习笔记**
-       - - 🛠️ **分享开发经验**
-       - - 🚀 **探索技术前沿**
+      - 📚 记录学习笔记
+      - 🛠️  分享开发经验
+      - 🚀 探索技术前沿
   
   # 文章设置
   showPostSummary: true

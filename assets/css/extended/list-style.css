@@ -1,0 +1,23 @@
+
+/* 首页介绍定制样式 */
+.entry-content ul, .entry-content ol {
+  padding-left: 2rem !important;
+  margin-left: 0 !important;
+}
+
+.entry-content p {
+  margin-bottom: 0.5rem;
+}
+
+.entry-content li {
+  margin-bottom: 0.5rem;
+  display: list-item !important;
+}
+
+.entry-content ul {
+  list-style-type: disc !important;
+}
+
+.entry-content ol {
+  list-style-type: decimal !important;
+}
