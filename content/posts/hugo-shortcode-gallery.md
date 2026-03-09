@@ -9,7 +9,7 @@ cover:
   hidden: false
 ---
 
-
+现在，有了这款**视频文案提取器**，一切变得如此简单！
 
 <div class="papermod-gallery">
   {{< figure src="/images/hugo-shortcode-gallery/1.jpg" caption="大理洱海" >}}
@@ -17,5 +17,5 @@ cover:
   {{< figure src="/images/hugo-shortcode-gallery/3.jpg" caption="香格里拉" >}}
 </div>
 
-现在，有了这款**视频文案提取器**，一切变得如此简单！
+
 
