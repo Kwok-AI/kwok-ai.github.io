@@ -1,12 +1,9 @@
-name: Deploy Hugo Site
+name: Deploy Hugo to GitHub Pages
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:  # 允许手动触发
-
-permissions:
-  contents: write  # 关键：允许写入gh-pages分支
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -15,28 +12,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
-          fetch-depth: 0  # 获取所有历史
-          
+          submodules: true
+          fetch-depth: 0
+
+      # 关键修复：升级到 actions-hugo@v3
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v3  # 从 v2 升级到 v3
         with:
-          hugo-version: '0.156.1'
-          extended: true
-          
-      - name: Build with Hugo
+          hugo-version: '0.156.1'       # 目标版本
+          extended: true                # 必须开启 extended
+
+      - name: Build
         run: |
-          hugo \
-            --minify \
-            --baseURL "https://${{ github.repository_owner }}.github.io/"
-        env:
-          HUGO_ENV: production
-          
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+          hugo clean
+          hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages  # 关键：发布到gh-pages分支
-          force_orphan: true  # 关键：清空旧文件
