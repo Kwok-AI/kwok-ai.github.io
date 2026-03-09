@@ -1,9 +1,12 @@
-name: Deploy Hugo to GitHub Pages
+name: Deploy Hugo Site
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
+  workflow_dispatch:  # 允许手动触发
+
+permissions:
+  contents: write  # 关键：允许写入gh-pages分支
 
 jobs:
   deploy:
@@ -12,27 +15,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true
-          fetch-depth: 0
-
-      # 核心修改：手动下载并安装 Hugo 0.156.1 extended
-      - name: Install Hugo 0.156.1 extended
+          submodules: recursive
+          fetch-depth: 0  # 获取所有历史
+          
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.125.2'
+          extended: true
+          
+      - name: Build with Hugo
         run: |
-          # 下载 Hugo 安装包（Linux/amd64 版本，验证过可访问）
-          wget -q https://github.com/gohugoio/hugo/releases/download/v0.156.1/hugo_extended_0.156.1_linux-amd64.tar.gz
-          # 解压到 /usr/local/bin（系统可执行目录）
-          tar -xzf hugo_extended_0.156.1_linux-amd64.tar.gz hugo
-          sudo mv hugo /usr/local/bin/
-          # 验证版本（关键：确保安装成功）
-          hugo version
-
-      - name: Build
-        run: |
-          hugo clean
-          hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+          hugo \
+            --minify \
+            --baseURL "https://${{ github.repository_owner }}.github.io/"
+        env:
+          HUGO_ENV: production
+          
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          publish_branch: gh-pages  # 关键：发布到gh-pages分支
+          force_orphan: true  # 关键：清空旧文件
