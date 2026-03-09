@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>KwokChung's Blog</title><link>https://Kwok-AI.github.io/</link><description>Recent content on KwokChung's Blog</description><generator>Hugo -- 0.125.2</generator><language>zh</language><lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Kwok-AI.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>告别手写笔记！一键提取视频文案，这款神器太强大了</title><link>https://Kwok-AI.github.io/posts/video-caption-extractor/</link><pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate><guid>https://Kwok-AI.github.io/posts/video-caption-extractor/</guid><description>一款基于AI智能语音识别技术的效率工具，能够自动从视频中提取语音内容，并精准转换为文字文案。无论是内容创作者、职场人士，还是学生、教师，都能从中获得极大便利。</description><content:encoded><![CDATA[<p>还在为整理视频内容而烦恼吗？会议记录、课程复盘、内容创作……每次都要反复听写，耗时又费力？</p>
+<p>现在，有了这款<strong>视频文案提取器</strong>，一切变得如此简单！</p>
+<h2 id="为什么选择它">为什么选择它？</h2>
+<p>这是一款基于AI智能语音识别技术的效率工具，能够自动从视频中提取语音内容，并精准转换为文字文案。无论是内容创作者、职场人士，还是学生、教师，都能从中获得极大便利。</p>
+<h3 id="三大识别引擎满足不同需求">三大识别引擎，满足不同需求</h3>
+<p><strong>1. Whisper引擎（OpenAI）</strong></p>
+<ul>
+<li><strong>高精度识别</strong>：中文识别准确率高达95%</li>
+<li><strong>多模型选择</strong>：从极速到超高精度，5种模型随心切换</li>
+<li><strong>双语支持</strong>：完美支持中文和英文识别</li>
+<li>模型精度越高，耗费时间越长。你的CPU越好、识别速度会越快。</li>
+</ul>
+<p><strong>2. Vosk引擎（离线）</strong></p>
+<ul>
+<li><strong>完全离线</strong>：无需网络，保护隐私，适合保密环境</li>
+<li><strong>本地模型</strong>：数据不出本地，安全可控</li>
+<li><strong>自由替换</strong>：可自行下载更大模型，提升识别效果</li>
+</ul>
+<p><strong>3. Google引擎（在线）</strong></p>
+<ul>
+<li>云端识别能力</li>
+<li>可作为备选方案使用</li>
+</ul>
+<h2 id="强大功能一览">强大功能一览</h2>
+<h3 id="-全格式视频支持">🎬 全格式视频支持</h3>
+<ul>
+<li>支持MP4、AVI、MOV、MKV等主流视频格式</li>
+<li>自动提取音频轨道，智能处理</li>
+</ul>
+<h3 id="-智能音频处理">⚡ 智能音频处理</h3>
+<ul>
+<li>自动转换为标准音频格式</li>
+<li>适配各引擎要求，省心省力</li>
+</ul>
+<h3 id="-批量处理专业版">📑 批量处理（专业版）</h3>
+<ul>
+<li>一次性处理多个视频文件</li>
+<li>自动排队识别，提升工作效率</li>
+</ul>
+<h2 id="简洁授权灵活选择">简洁授权，灵活选择</h2>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>Whisper模型</th>
+<th>视频时长</th>
+<th>批量处理</th>
+<th>Vosk离线识别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>免费版</td>
+<td>仅Tiny模型</td>
+<td>1分钟</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>标准版</td>
+<td>全部模型</td>
+<td>无限制</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>专业版</td>
+<td>全部模型</td>
+<td>无限制</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>激活便捷</strong>：采用离线激活机制，绑定设备机器码，无需持续联网验证。</p>
+<h2 id="这些场景你一定能用上">这些场景，你一定能用上！</h2>
+<h3 id="1-内容创作者">1. 内容创作者</h3>
+<ul>
+<li>快速提取视频字幕和文案</li>
+<li>跨平台内容制作，提升创作效率</li>
+</ul>
+<h3 id="2-会议记录者">2. 会议记录者</h3>
+<ul>
+<li>会议视频秒变文字纪要</li>
+<li>离线识别，保护商业机密</li>
+</ul>
+<h3 id="3-教育培训">3. 教育培训</h3>
+<ul>
+<li>课程视频内容一键提取</li>
+<li>方便学生复习、教师备课</li>
+</ul>
+<h3 id="4-个人用户">4. 个人用户</h3>
+<ul>
+<li>生活视频转文字记录</li>
+<li>免费版满足基础需求</li>
+</ul>
+<h2 id="立即体验提升效率">立即体验，提升效率！</h2>
+<p>无论是自媒体创作、工作会议记录，还是学习笔记整理，这款视频文案提取器都能成为你的得力助手。</p>
+<p><strong>特色亮点</strong>：</p>
+<ul>
+<li>✅ 离线优先，保护隐私</li>
+<li>✅ 多引擎可选，灵活应对</li>
+<li>✅ 中文优化，准确率高</li>
+<li>✅ 界面友好，操作简单</li>
+<li>✅ 跨格式支持，兼容性强</li>
+</ul>
+<hr>
+<p><strong>获取帮助与技术支持</strong><br>
+关注微信公众号：<strong>信息科技云课堂</strong>  ，获取最新资讯、使用教程和技术支持</p>
+<p><strong>告别繁琐的手工转录，拥抱智能高效的新工作方式！</strong>  ，
+立即体验，让你的视频处理效率翻倍！</p>
+]]></content:encoded></item></channel></rss>
