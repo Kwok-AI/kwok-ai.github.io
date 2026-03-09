@@ -11,7 +11,11 @@ cover:
 
 
 
-
+<div class="papermod-gallery">
+  {{< figure src="/images/hugo-shortcode-gallery/1.jpg" caption="大理洱海" >}}
+  {{< figure src="/images/hugo-shortcode-gallery/2.jpg" caption="丽江古城" >}}
+  {{< figure src="/images/hugo-shortcode-gallery/3.jpg" caption="香格里拉" >}}
+</div>
 
 现在，有了这款**视频文案提取器**，一切变得如此简单！
 
