@@ -35,6 +35,16 @@ params:
       - 📚 记录学习笔记
       - 🛠️  分享开发经验
       - 🚀 探索技术前沿
+  customHead: |
+    <!-- 加载 jQuery（画廊核心依赖） -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- 加载画廊依赖的插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-lazy@1.7.11/jquery.lazy.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swipebox@1.4.4/src/js/jquery.swipebox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+    <!-- 加载画廊所需 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swipebox@1.4.4/src/css/swipebox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
   # 文章设置
   showPostSummary: true
