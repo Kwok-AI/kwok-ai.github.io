@@ -9,7 +9,7 @@ cover:
   hidden: false
 ---
 
-{{< gallery dir="hugo-shortcode-gallery" title="我的相册" caption="true" >}}
+{{< gallery dir="hugo-shortcode-gallery" >}}
 
 
 
