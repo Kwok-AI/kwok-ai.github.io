@@ -1,47 +1,76 @@
-{{- /* 适配 PaperMod + Hugo 0.125.2 的画廊短代码 - 无语法错误版 */ -}}
-{{- $dir := .Get "dir" | default "" -}}
-{{- $title := .Get "title" | default "" -}}
-{{- $caption := .Get "caption" | default "false" -}}
+<!-- layouts/shortcodes/gallery.html 完整源码 -->
+{{- $gallery := .Get "gallery" -}}
+{{- $class := .Get "class" | default "gallery" -}}
+{{- $images := slice -}}
 
-{{- if ne $dir "" -}}
-  {{- /* 画廊标题 - 适配 PaperMod 样式 */ -}}
-  {{- if ne $title "" -}}
-    <h3 style="margin: 1.5rem 0 1rem; font-weight: 600; color: var(--primary);">{{ $title }}</h3>
+<!-- 处理两种调用方式：直接写figure或通过data配置 -->
+{{- if $gallery -}}
+  {{- $data := index .Site.Data.gallery $gallery -}}
+  {{- if $data.images -}}
+    {{- $images = $data.images -}}
   {{- end -}}
-
-  {{- /* 响应式画廊容器 */ -}}
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-    {{- /* 读取图片目录下的所有图片 */ -}}
-    {{- $images := readDir (printf "static/gallery/%s" $dir) -}}
-    {{- range $images -}}
-      {{- /* 过滤仅支持的图片格式 */ -}}
-      {{- $ext := lower .Ext -}}
-      {{- if in (slice ".jpg" ".jpeg" ".png" ".webp" ".gif") $ext -}}
-        {{- $imageName := .Name | replaceRE "\\.[^.]+$" "" -}}
-        {{- $imagePath := printf "/gallery/%s/%s" $dir .Name -}}
-        
-        {{- /* 单个图片项 */ -}}
-        <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
-          <a href="{{ $imagePath | relURL }}" target="_blank" style="display: block;">
-            <img 
-              src="{{ $imagePath | relURL }}" 
-              alt="{{ $imageName }}" 
-              style="width: 100%; height: 180px; object-fit: cover; display: block;"
-            >
-          </a>
-          {{- /* 图片说明文字（可选） */ -}}
-          {{- if eq $caption "true" -}}
-            <p style="margin: 0.5rem 0; padding: 0 0.5rem; font-size: 0.875rem; color: var(--secondary); text-align: center;">
-              {{ $imageName }}
-            </p>
-          {{- end -}}
-        </div>
-      {{- end -}}
-    {{- end -}}
-  </div>
 {{- else -}}
-  {{- /* 错误提示 - 完全规避短代码标签解析问题 */ -}}
-  <div style="color: var(--error); padding: 1rem; background: var(--code-bg); border-radius: 4px;">
-    画廊配置错误：请指定 dir 参数（示例：gallery dir="your-folder"）
-  </div>
+  {{- $images = .Inner | transform.Unmarshal | default slice -}}
+  {{- if eq (len $images) 0 -}}
+    {{- $inner := .Inner | replaceRE "\n" "" | replaceRE "\t" "" -}}
+    {{- $figureMatches := findRE `{{<\s*figure\s+src=["']([^"']+)["'](\s+caption=["']([^"']+)["'])?\s*>}}` $inner -}}
+    {{- range $figureMatches -}}
+      {{- $src := replaceRE `{{<\s*figure\s+src=["']([^"']+)["'].*>}}` "$1" . -}}
+      {{- $caption := replaceRE `{{<\s*figure\s+src=["'][^"']+["'](\s+caption=["']([^"']+)["'])?\s*>}}` "$2" . -}}
+      {{- $images = $images | append (dict "src" $src "caption" $caption) -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
+
+<!-- 渲染画廊 -->
+<div class="{{ $class }}">
+  {{- range $images -}}
+    {{- $src := .src -}}
+    {{- $caption := .caption | default "" -}}
+    <div class="gallery-item">
+      <a href="{{ $src | relURL }}" target="_blank" rel="noopener noreferrer">
+        <img 
+          src="{{ $src | relURL }}" 
+          alt="{{ $caption | default "Gallery image" }}" 
+          loading="lazy" 
+          class="gallery-img"
+        >
+      </a>
+      {{- if $caption -}}
+        <div class="gallery-caption">{{ $caption }}</div>
+      {{- end -}}
+    </div>
+  {{- end -}}
+</div>
+
+<!-- 基础样式（内联，避免额外引入CSS） -->
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  .gallery-item:hover {
+    transform: translateY(-4px);
+  }
+  .gallery-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  .gallery-caption {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #333;
+    background: #f8f9fa;
+  }
+</style>
