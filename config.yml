@@ -1,8 +1,6 @@
 baseURL: "https://kwok-ai.github.io/"
 title: "KwokChung's Blog"
-theme: 
-  - PaperMod
-  - hugo-shortcode-gallery]
+theme: [PaperMod, hugo-shortcode-gallery]
 languageCode: "zh"
 defaultContentLanguage: "zh"
 
