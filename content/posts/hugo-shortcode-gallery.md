@@ -9,7 +9,7 @@ cover:
   hidden: false
 ---
 
-{{< gallery match="images/*" sortOrder="asc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< gallery dir="hugo-shortcode-gallery" title="我的相册" caption="true" >}}
 
 现在，有了这款**视频文案提取器**，一切变得如此简单！
 
