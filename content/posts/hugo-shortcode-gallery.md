@@ -9,7 +9,7 @@ cover:
   hidden: false
 ---
 
-{{< gallery dir="hugo-shortcode-gallery" >}}
+
 
 
 
